@@ -1,0 +1,39 @@
+import sys
+
+if len(sys.argv) != 6:
+    print("Usage: python grade.py <sub1> <sub2> <sub3> <sub4> <sub5>")
+    sys.exit(1)
+
+script_name = sys.argv[0]
+
+m1 = float(sys.argv[1])
+m2 = float(sys.argv[2])
+m3 = float(sys.argv[3])
+m4 = float(sys.argv[4])
+m5 = float(sys.argv[5])
+
+average = (m1 + m2 + m3 + m4 + m5) / 5
+
+if average >= 90:
+    grade = "A"
+elif average >= 75:
+    grade = "B"
+elif average >= 60:
+    grade = "C"
+elif average >= 40:
+    grade = "D"
+else:
+    grade = "Fail"
+
+    # Default marks for all subjects
+    m1 = 40
+    m2 = 40
+    m3 = 40
+    m4 = 40
+    m5 = 40
+
+    print("Default Marks Applied:", m1, m2, m3, m4, m5)
+
+print("script Name:", script_name)
+print("Average Marks:", average)
+print("Grade:", grade)
